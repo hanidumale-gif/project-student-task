@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Task Tracker | Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-tasks"></i>
+            <h1>Student<span>Tracker</span></h1>
+        </div>
+        
+        <div class="nav-links">
+            <a href="home.html" class="active">
+                <i class="fas fa-home"></i> Home
+            </a>
+            <a href="about.html">
+                <i class="fas fa-info-circle"></i> About
+            </a>
+            <a href="services.html">
+                <i class="fas fa-cogs"></i> Features
+            </a>
+            <a href="contact.html">
+                <i class="fas fa-envelope"></i> Contact
+            </a>
+            <button class="login-btn" id="loginBtn">
+                <i class="fas fa-sign-in-alt"></i> Login
+            </button>
+        </div>
+        
+        <button class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h2>Organize Your Academic Life <span class="highlight">Effortlessly</span></h2>
+                <p>Track assignments, manage deadlines, and boost your productivity with our intuitive student task management system.</p>
+                <div class="hero-buttons">
+                    <a href="#dashboard" class="btn-primary">
+                        <i class="fas fa-rocket"></i> Get Started Free
+                    </a>
+                    <a href="about.html" class="btn-secondary">
+                        <i class="fas fa-play-circle"></i> Watch Demo
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <h3>5,000+</h3>
+                        <p>Students Using</p>
+                    </div>
+                    <div class="stat">
+                        <h3>98%</h3>
+                        <p>Productivity Increase</p>
+                    </div>
+                    <div class="stat">
+                        <h3>4.9/5</h3>
+                        <p>User Rating</p>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="dashboard-preview">
+                    <div class="preview-header">
+                        <div class="preview-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <span>Student Dashboard Preview</span>
+                    </div>
+                    <div class="preview-content">
+                        <div class="task-preview">
+                            <div class="preview-task completed">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Complete Math Assignment</span>
+                            </div>
+                            <div class="preview-task pending">
+                                <i class="fas fa-clock"></i>
+                                <span>Submit Research Paper</span>
+                                <span class="deadline">Due Tomorrow</span>
+                            </div>
+                            <div class="preview-task pending">
+                                <i class="fas fa-book"></i>
+                                <span>Study for Physics Exam</span>
+                                <span class="deadline">In 3 days</span>
+                            </div>
+                            <div class="preview-task">
+                                <i class="fas fa-laptop-code"></i>
+                                <span>Complete Coding Project</span>
+                                <span class="deadline">Next Week</span>
+                            </div>
+                        </div>
+                        <div class="preview-chart">
+                            <div class="chart-bar" style="height: 70%;"></div>
+                            <div class="chart-bar" style="height: 90%;"></div>
+                            <div class="chart-bar" style="height: 60%;"></div>
+                            <div class="chart-bar" style="height: 85%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Dashboard -->
+    <section id="dashboard" class="dashboard-section">
+        <div class="section-header">
+            <h2>Your Personal <span class="highlight">Task Dashboard</span></h2>
+            <p>Manage all your academic tasks in one place</p>
+        </div>
+
+        <div class="dashboard-container">
+            <!-- Main Content -->
+            <main class="main-content">
+                <!-- Task Input -->
+                <div class="task-input-card">
+                    <h3><i class="fas fa-plus-circle"></i> Add New Task</h3>
+                    <form id="taskForm">
+                        <div class="form-group">
+                            <input type="text" id="taskTitle" placeholder="Task Title" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="taskDescription" placeholder="Task Description" rows="2"></textarea>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <select id="taskPriority">
+                                    <option value="low">Low Priority</option>
+                                    <option value="medium" selected>Medium Priority</option>
+                                    <option value="high">High Priority</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <input type="date" id="taskDeadline">
+                            </div>
+                            <div class="form-group">
+                                <select id="taskCategory">
+                                    <option value="academic">Academic</option>
+                                    <option value="personal">Personal</option>
+                                    <option value="work">Work</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn-primary">
+                            <i class="fas fa-plus"></i> Add Task
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Progress Section -->
+                <div class="progress-section">
+                    <div class="progress-card">
+                        <h4>Overall Progress</h4>
+                        <div class="progress-container">
+                            <div class="progress-bar" id="progressBar">
+                                <div class="progress-fill" id="progressFill"></div>
+                            </div>
+                            <span class="progress-text" id="progressText">0% Complete</span>
+                        </div>
+                        <div class="progress-stats">
+                            <div class="stat">
+                                <span class="stat-number" id="totalTasks">0</span>
+                                <span class="stat-label">Total Tasks</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number" id="completedTasks">0</span>
+                                <span class="stat-label">Completed</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number" id="pendingTasks">0</span>
+                                <span class="stat-label">Pending</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="stats-card">
+                        <h4>Weekly Overview</h4>
+                        <div class="week-stats">
+                            <div class="day-stat">
+                                <span class="day">Mon</span>
+                                <div class="day-bar" style="height: 70%;"></div>
+                            </div>
+                            <div class="day-stat">
+                                <span class="day">Tue</span>
+                                <div class="day-bar" style="height: 90%;"></div>
+                            </div>
+                            <div class="day-stat">
+                                <span class="day">Wed</span>
+                                <div class="day-bar" style="height: 60%;"></div>
+                            </div>
+                            <div class="day-stat">
+                                <span class="day">Thu</span>
+                                <div class="day-bar" style="height: 85%;"></div>
+                            </div>
+                            <div class="day-stat">
+                                <span class="day">Fri</span>
+                                <div class="day-bar" style="height: 75%;"></div>
+                            </div>
+                            <div class="day-stat">
+                                <span class="day">Sat</span>
+                                <div class="day-bar" style="height: 50%;"></div>
+                            </div>
+                            <div class="day-stat">
+                                <span class="day">Sun</span>
+                                <div class="day-bar" style="height: 40%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tasks Section -->
+                <div class="tasks-section">
+                    <div class="section-header">
+                        <h3>Your Tasks</h3>
+                        <div class="filter-controls">
+                            <select id="taskFilter">
+                                <option value="all">All Tasks</option>
+                                <option value="pending">Pending</option>
+                                <option value="completed">Completed</option>
+                            </select>
+                            <input type="text" id="taskSearch" placeholder="Search tasks...">
+                        </div>
+                    </div>
+
+                    <div id="tasksContainer" class="tasks-container">
+                        <!-- Tasks will be loaded here -->
+                        <div class="empty-state">
+                            <i class="fas fa-clipboard-list"></i>
+                            <h4>No tasks yet</h4>
+                            <p>Add your first task to get started!</p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </section>
+
+    <!-- Features Preview -->
+    <section class="features-section">
+        <div class="section-header">
+            <h2>Powerful <span class="highlight">Features</span> for Students</h2>
+            <p>Everything you need to stay organized and productive</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-calendar-check"></i>
+                </div>
+                <h3>Smart Deadlines</h3>
+                <p>Never miss an assignment with intelligent deadline tracking and reminders.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3>Progress Analytics</h3>
+                <p>Visualize your academic progress with detailed charts and insights.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3>Mobile Friendly</h3>
+                <p>Access your tasks from any device, anywhere, anytime.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-bell"></i>
+                </div>
+                <h3>Smart Notifications</h3>
+                <p>Get timely reminders for upcoming deadlines and tasks.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="logo">
+                    <i class="fas fa-tasks"></i>
+                    <h2>Student<span>Tracker</span></h2>
+                </div>
+                <p>Helping students stay organized and productive since 2023.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Features</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Features</h3>
+                <ul>
+                    <li><a href="#">Task Management</a></li>
+                    <li><a href="#">Progress Tracking</a></li>
+                    <li><a href="#">Deadline Alerts</a></li>
+                    <li><a href="#">Analytics Dashboard</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <ul class="contact-info">
+                    <li><i class="fas fa-envelope"></i> support@studenttracker.com</li>
+                    <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                    <li><i class="fas fa-map-marker-alt"></i> 123 University Ave, Campus City</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2023 Student Task Tracker. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2><i class="fas fa-sign-in-alt"></i> Student Login</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">Student Email</label>
+                    <input type="email" id="loginEmail" placeholder="hani@gmail.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" placeholder="Enter your password" required>
+                </div>
+                <div class="form-options">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="rememberMe">
+                        <span>Remember me</span>
+                    </label>
+                    <a href="#" class="forgot-link">Forgot password?</a>
+                </div>
+                <button type="submit" class="btn-primary btn-block">
+                    <i class="fas fa-sign-in-alt"></i> Login to Dashboard
+                </button>
+                <p class="signup-link">Don't have an account? <a href="#" id="signupLink">Sign up here</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2><i class="fas fa-user-plus"></i> Create Student Account</h2>
+            <form id="signupForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="signupFirstName">First Name</label>
+                        <input type="text" id="signupFirstName" placeholder="John" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signupLastName">Last Name</label>
+                        <input type="text" id="signupLastName" placeholder="Doe" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="signupEmail">University Email</label>
+                    <input type="email" id="signupEmail" placeholder="john.doe@university.edu" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">Password</label>
+                    <input type="password" id="signupPassword" placeholder="Create a password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" placeholder="Confirm your password" required>
+                </div>
+                <div class="form-group">
+                    <label for="university">University</label>
+                    <select id="university" required>
+                        <option value="">Select your university</option>
+                        <option value="state">State University</option>
+                        <option value="tech">Tech Institute</option>
+                        <option value="college">Community College</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="major">Major/Field of Study</label>
+                    <input type="text" id="major" placeholder="Computer Science">
+                </div>
+                <button type="submit" class="btn-primary btn-block">
+                    <i class="fas fa-user-plus"></i> Create Account
+                </button>
+                <p class="signup-link">Already have an account? <a href="#" id="loginLink">Login here</a></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

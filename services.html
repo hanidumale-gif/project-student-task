@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features | Student Task Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-tasks"></i>
+            <h1>Student<span>Tracker</span></h1>
+        </div>
+        
+        <div class="nav-links">
+            <a href="home.html">
+                <i class="fas fa-home"></i> Home
+            </a>
+            <a href="about.html">
+                <i class="fas fa-info-circle"></i> About
+            </a>
+            <a href="services.html" class="active">
+                <i class="fas fa-cogs"></i> Features
+            </a>
+            <a href="contact.html">
+                <i class="fas fa-envelope"></i> Contact
+            </a>
+            <button class="login-btn" id="loginBtn">
+                <i class="fas fa-sign-in-alt"></i> Login
+            </button>
+        </div>
+        
+        <button class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+
+    <!-- Services Hero -->
+    <section class="page-hero">
+        <div class="hero-content">
+            <h1>Powerful <span class="highlight">Features</span></h1>
+            <p>Discover everything StudentTracker offers to boost your academic productivity</p>
+        </div>
+    </section>
+
+    <!-- Features Grid -->
+    <section class="features-detail">
+        <div class="container">
+            <div class="section-header">
+                <h2>Complete <span class="highlight">Task Management</span> Suite</h2>
+                <p>Designed specifically for student needs</p>
+            </div>
+
+            <div class="features-grid detailed">
+                <div class="feature-detail-card">
+                    <div class="feature-icon large">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3>Smart Task Manager</h3>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Create and organize tasks by course</li>
+                        <li><i class="fas fa-check"></i> Set priority levels (High/Medium/Low)</li>
+                        <li><i class="fas fa-check"></i> Add detailed descriptions and notes</li>
+                        <li><i class="fas fa-check"></i> Categorize by assignment type</li>
+                    </ul>
+                </div>
+
+                <div class="feature-detail-card">
+                    <div class="feature-icon large">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>Academic Calendar</h3>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Visual calendar view</li>
+                        <li><i class="fas fa-check"></i> Sync with university schedules</li>
+                        <li><i class="fas fa-check"></i> Exam date tracking</li>
+                        <li><i class="fas fa-check"></i> Holiday and break planning</li>
+                    </ul>
+                </div>
+
+                <div class="feature-detail-card">
+                    <div class="feature-icon large">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <h3>Progress Analytics</h3>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Course-wise progress tracking</li>
+                        <li><i class="fas fa-check"></i> Productivity insights</li>
+                        <li><i class="fas fa-check"></i> Time management reports</li>
+                        <li><i class="fas fa-check"></i> Goal achievement tracking</li>
+                    </ul>
+                </div>
+
+                <div class="feature-detail-card">
+                    <div class="feature-icon large">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <h3>Smart Reminders</h3>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Customizable notifications</li>
+                        <li><i class="fas fa-check"></i> Email and push reminders</li>
+                        <li><i class="fas fa-check"></i> Deadline warnings</li>
+                        <li><i class="fas fa-check"></i> Study session reminders</li>
+                    </ul>
+                </div>
+
+                <div class="feature-detail-card">
+                    <div class="feature-icon large">
+                        <i class="fas fa-file-upload"></i>
+                    </div>
+                    <h3>File Attachments</h3>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Attach assignment files</li>
+                        <li><i class="fas fa-check"></i> Lecture note storage</li>
+                        <li><i class="fas fa-check"></i> Reference material library</li>
+                        <li><i class="fas fa-check"></i> Cloud sync across devices</li>
+                    </ul>
+                </div>
+
+                <div class="feature-detail-card">
+                    <div class="feature-icon large">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Group Projects</h3>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Shared task lists</li>
+                        <li><i class="fas fa-check"></i> Team progress tracking</li>
+                        <li><i class="fas fa-check"></i> Collaboration tools</li>
+                        <li><i class="fas fa-check"></i> Meeting scheduling</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Simple, <span class="highlight">Student-Friendly</span> Pricing</h2>
+                <p>Choose the plan that fits your academic needs</p>
+            </div>
+
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Free</h3>
+                        <div class="price">$0<span>/month</span></div>
+                        <p>Perfect for getting started</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Basic task management</li>
+                        <li><i class="fas fa-check"></i> Up to 50 tasks</li>
+                        <li><i class="fas fa-check"></i> Basic reminders</li>
+                        <li><i class="fas fa-check"></i> Web access only</li>
+                        <li><i class="fas fa-times"></i> No file attachments</li>
+                        <li><i class="fas fa-times"></i> No advanced analytics</li>
+                    </ul>
+                    <button class="btn-secondary">Get Started</button>
+                </div>
+
+                <div class="pricing-card popular">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3>Pro Student</h3>
+                        <div class="price">$4.99<span>/month</span></div>
+                        <p>Best for serious students</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Unlimited tasks</li>
+                        <li><i class="fas fa-check"></i> Advanced task management</li>
+                        <li><i class="fas fa-check"></i> Smart reminders</li>
+                        <li><i class="fas fa-check"></i> Mobile app access</li>
+                        <li><i class="fas fa-check"></i> File attachments (up to 100MB)</li>
+                        <li><i class="fas fa-check"></i> Basic analytics</li>
+                    </ul>
+                    <button class="btn-primary">Upgrade Now</button>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Premium</h3>
+                        <div class="price">$9.99<span>/month</span></div>
+                        <p>For maximum productivity</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Everything in Pro</li>
+                        <li><i class="fas fa-check"></i> Unlimited file storage</li>
+                        <li><i class="fas fa-check"></i> Advanced analytics</li>
+                        <li><i class="fas fa-check"></i> Group project features</li>
+                        <li><i class="fas fa-check"></i> Priority support</li>
+                        <li><i class="fas fa-check"></i> Custom integrations</li>
+                    </ul>
+                    <button class="btn-secondary">Go Premium</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked <span class="highlight">Questions</span></h2>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Is StudentTracker really free?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! Our basic version is completely free forever with no hidden charges. You can manage up to 50 tasks, set reminders, and access all core features without paying anything.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I use it on my phone?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! StudentTracker is fully responsive and works perfectly on mobile browsers. We also offer native mobile apps for iOS and Android with Pro and Premium plans.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How do you protect my data?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We use industry-standard encryption for all data transmission and storage. Your academic information is private and secure, and we never share your data with third parties.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I export my data?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, all plans allow you to export your tasks and progress data in multiple formats (CSV, PDF) for backup or use in other applications.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Boost Your Academic Productivity?</h2>
+                <p>Join thousands of students who are already achieving more with StudentTracker</p>
+                <div class="cta-buttons">
+                    <a href="home.html#dashboard" class="btn-primary">
+                        <i class="fas fa-rocket"></i> Start Free Today
+                    </a>
+                    <a href="contact.html" class="btn-secondary">
+                        <i class="fas fa-question-circle"></i> Need Help?
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="logo">
+                    <i class="fas fa-tasks"></i>
+                    <h2>Student<span>Tracker</span></h2>
+                </div>
+                <p>Helping students stay organized and productive since 2023.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Features</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <ul class="contact-info">
+                    <li><i class="fas fa-envelope"></i> support@studenttracker.com</li>
+                    <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                    <li><i class="fas fa-map-marker-alt"></i> 123 University Ave, Campus City</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2023 Student Task Tracker. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2><i class="fas fa-sign-in-alt"></i> Student Login</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">Student Email</label>
+                    <input type="email" id="loginEmail" placeholder="you@university.edu" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" placeholder="Enter your password" required>
+                </div>
+                <div class="form-options">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="rememberMe">
+                        <span>Remember me</span>
+                    </label>
+                    <a href="#" class="forgot-link">Forgot password?</a>
+                </div>
+                <button type="submit" class="btn-primary btn-block">
+                    <i class="fas fa-sign-in-alt"></i> Login to Dashboard
+                </button>
+                <p class="signup-link">Don't have an account? <a href="#" id="signupLink">Sign up here</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2><i class="fas fa-user-plus"></i> Create Student Account</h2>
+            <form id="signupForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="signupFirstName">First Name</label>
+                        <input type="text" id="signupFirstName" placeholder="John" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signupLastName">Last Name</label>
+                        <input type="text" id="signupLastName" placeholder="Doe" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="signupEmail">University Email</label>
+                    <input type="email" id="signupEmail" placeholder="john.doe@university.edu" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">Password</label>
+                    <input type="password" id="signupPassword" placeholder="Create a password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" placeholder="Confirm your password" required>
+                </div>
+                <div class="form-group">
+                    <label for="university">University</label>
+                    <select id="university" required>
+                        <option value="">Select your university</option>
+                        <option value="state">State University</option>
+                        <option value="tech">Tech Institute</option>
+                        <option value="college">Community College</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="major">Major/Field of Study</label>
+                    <input type="text" id="major" placeholder="Computer Science">
+                </div>
+                <button type="submit" class="btn-primary btn-block">
+                    <i class="fas fa-user-plus"></i> Create Account
+                </button>
+                <p class="signup-link">Already have an account? <a href="#" id="loginLink">Login here</a></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
